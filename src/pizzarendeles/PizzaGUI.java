@@ -26,7 +26,6 @@ public class PizzaGUI extends javax.swing.JFrame {
         pnl_alap = new javax.swing.JPanel();
         rdbtn_tejfolos = new javax.swing.JRadioButton();
         rdbtn_paradicsomos = new javax.swing.JRadioButton();
-        lbl_ar = new javax.swing.JLabel();
         cmbbx_pizza = new javax.swing.JComboBox<>();
         pnl_feltet = new javax.swing.JPanel();
         chkbx_ananasz = new javax.swing.JCheckBox();
@@ -39,8 +38,13 @@ public class PizzaGUI extends javax.swing.JFrame {
         chkbx_bbq = new javax.swing.JCheckBox();
         chkbx_csirke = new javax.swing.JCheckBox();
         lbl_pizzakep = new javax.swing.JLabel();
-        spnr_ar = new javax.swing.JSpinner();
         btn_rendeles = new javax.swing.JButton();
+        lbl_udito = new javax.swing.JLabel();
+        cmbbx_udito = new javax.swing.JComboBox<>();
+        lbl_darab = new javax.swing.JLabel();
+        lbl_ar = new javax.swing.JLabel();
+        lbl_arszam = new javax.swing.JLabel();
+        txt_darab = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Pizza Rendelő");
@@ -114,8 +118,6 @@ public class PizzaGUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        lbl_ar.setText("Ár: ");
-
         cmbbx_pizza.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<<Alap Pizza >>", "Margherita", "Hús Imádó", "Vegetáriánus", "Vegán", "Tenger Gyümölcse" }));
         cmbbx_pizza.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,67 +128,22 @@ public class PizzaGUI extends javax.swing.JFrame {
         pnl_feltet.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED), "Plusz Feltét"));
 
         chkbx_ananasz.setText("Ananász");
-        chkbx_ananasz.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                chkbx_ananaszFocusGained(evt);
-            }
-        });
 
         chkbx_cheddar.setText("Cheddar");
-        chkbx_cheddar.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                chkbx_cheddarFocusGained(evt);
-            }
-        });
 
         chkbx_gomba.setText("Gomba");
-        chkbx_gomba.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                chkbx_gombaFocusGained(evt);
-            }
-        });
 
         chkbx_tojas.setText("Főtt Tojás");
-        chkbx_tojas.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                chkbx_tojasFocusGained(evt);
-            }
-        });
 
         chkbx_tejfol.setText("Tejföl");
-        chkbx_tejfol.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                chkbx_tejfolFocusGained(evt);
-            }
-        });
 
         chkbox_pepperone.setText("Pepperone");
-        chkbox_pepperone.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                chkbox_pepperoneFocusGained(evt);
-            }
-        });
 
         chkbx_kukorica.setText("Kukorica");
-        chkbx_kukorica.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                chkbx_kukoricaFocusGained(evt);
-            }
-        });
 
         chkbx_bbq.setText("BBQ szósz");
-        chkbx_bbq.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                chkbx_bbqFocusGained(evt);
-            }
-        });
 
         chkbx_csirke.setText("Csirke");
-        chkbx_csirke.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                chkbx_csirkeFocusGained(evt);
-            }
-        });
 
         javax.swing.GroupLayout pnl_feltetLayout = new javax.swing.GroupLayout(pnl_feltet);
         pnl_feltet.setLayout(pnl_feltetLayout);
@@ -228,52 +185,78 @@ public class PizzaGUI extends javax.swing.JFrame {
                     .addComponent(chkbx_tojas)
                     .addComponent(chkbx_csirke)
                     .addComponent(chkbx_kukorica))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         lbl_pizzakep.setIcon(new javax.swing.ImageIcon(getClass().getResource("/New-York-Style-Pizza-Thumbnail1-scaled.jpg"))); // NOI18N
 
-        spnr_ar.setEnabled(false);
-
         btn_rendeles.setText("Rendelés");
+        btn_rendeles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_rendelesActionPerformed(evt);
+            }
+        });
+
+        lbl_udito.setText("Ajándék üdítő:");
+
+        cmbbx_udito.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<< Üdítő >>", "Coca-Cola", "Sprite", "Fanta", "Coca-Cola Zero" }));
+
+        lbl_darab.setText("Darab:");
+
+        lbl_ar.setText("Ár:");
+
+        lbl_arszam.setText("2500");
+
+        txt_darab.setColumns(1);
+        txt_darab.setText("1");
+        txt_darab.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_darabActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(pnl_teszta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(pnl_alap, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(pnl_feltet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lbl_pizzakep)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_rendeles, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbl_udito)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lbl_ar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(spnr_ar, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(btn_rendeles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap(13, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(117, 117, 117)
-                .addComponent(cmbbx_pizza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_arszam, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbl_darab)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txt_darab, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cmbbx_udito, javax.swing.GroupLayout.Alignment.TRAILING, 0, 0, Short.MAX_VALUE)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(pnl_teszta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pnl_alap, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(pnl_feltet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addComponent(cmbbx_pizza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(13, 13, 13))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {pnl_alap, pnl_teszta});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnl_alap, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnl_teszta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -281,16 +264,24 @@ public class PizzaGUI extends javax.swing.JFrame {
                 .addComponent(cmbbx_pizza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(pnl_feltet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl_pizzakep)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lbl_udito)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cmbbx_udito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(spnr_ar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbl_ar))
-                        .addGap(18, 18, 18)
-                        .addComponent(btn_rendeles)))
-                .addContainerGap(12, Short.MAX_VALUE))
+                            .addComponent(lbl_darab)
+                            .addComponent(txt_darab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_ar)
+                            .addComponent(lbl_arszam))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_rendeles))
+                    .addComponent(lbl_pizzakep))
+                .addGap(16, 16, 16))
         );
 
         pack();
@@ -298,54 +289,19 @@ public class PizzaGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmbbx_pizzaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbbx_pizzaActionPerformed
-        
-        spnr_ar.setValue(2700);
+
     }//GEN-LAST:event_cmbbx_pizzaActionPerformed
 
-    private void chkbx_ananaszFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chkbx_ananaszFocusGained
-        int ar = Integer.parseInt(spnr_ar.getValue().toString())+200;
-        spnr_ar.setValue(ar);
-    }//GEN-LAST:event_chkbx_ananaszFocusGained
+    private void btn_rendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_rendelesActionPerformed
+        JOptionPane.showMessageDialog(rootPane, "A pizzádat hamarosan szállítjuk!");
+        
+    }//GEN-LAST:event_btn_rendelesActionPerformed
 
-    private void chkbx_gombaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chkbx_gombaFocusGained
-        int ar = Integer.parseInt(spnr_ar.getValue().toString())+200;
-        spnr_ar.setValue(ar);
-    }//GEN-LAST:event_chkbx_gombaFocusGained
-
-    private void chkbx_kukoricaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chkbx_kukoricaFocusGained
-       int ar = Integer.parseInt(spnr_ar.getValue().toString())+200;
-       spnr_ar.setValue(ar);
-    }//GEN-LAST:event_chkbx_kukoricaFocusGained
-
-    private void chkbx_tejfolFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chkbx_tejfolFocusGained
-        int ar = Integer.parseInt(spnr_ar.getValue().toString())+200;
-        spnr_ar.setValue(ar);
-    }//GEN-LAST:event_chkbx_tejfolFocusGained
-
-    private void chkbx_cheddarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chkbx_cheddarFocusGained
-        int ar = Integer.parseInt(spnr_ar.getValue().toString())+200;
-        spnr_ar.setValue(ar);
-    }//GEN-LAST:event_chkbx_cheddarFocusGained
-
-    private void chkbx_tojasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chkbx_tojasFocusGained
-        int ar = Integer.parseInt(spnr_ar.getValue().toString())+200;
-        spnr_ar.setValue(ar);
-    }//GEN-LAST:event_chkbx_tojasFocusGained
-
-    private void chkbox_pepperoneFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chkbox_pepperoneFocusGained
-        int ar = Integer.parseInt(spnr_ar.getValue().toString())+200;
-        spnr_ar.setValue(ar);
-    }//GEN-LAST:event_chkbox_pepperoneFocusGained
-
-    private void chkbx_bbqFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chkbx_bbqFocusGained
-        int ar = Integer.parseInt(spnr_ar.getValue().toString())+200;
-        spnr_ar.setValue(ar);
-    }//GEN-LAST:event_chkbx_bbqFocusGained
-
-    private void chkbx_csirkeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chkbx_csirkeFocusGained
-        int ar = Integer.parseInt(spnr_ar.getValue().toString())+200;
-        spnr_ar.setValue(ar);
-    }//GEN-LAST:event_chkbx_csirkeFocusGained
+    private void txt_darabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_darabActionPerformed
+        int darab = Integer.parseInt(txt_darab.getText());
+        int ar = darab * 2500;
+        lbl_arszam.setText(Integer.toString(ar));
+    }//GEN-LAST:event_txt_darabActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -393,8 +349,12 @@ public class PizzaGUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox chkbx_tejfol;
     private javax.swing.JCheckBox chkbx_tojas;
     private javax.swing.JComboBox<String> cmbbx_pizza;
+    private javax.swing.JComboBox<String> cmbbx_udito;
     private javax.swing.JLabel lbl_ar;
+    private javax.swing.JLabel lbl_arszam;
+    private javax.swing.JLabel lbl_darab;
     private javax.swing.JLabel lbl_pizzakep;
+    private javax.swing.JLabel lbl_udito;
     private javax.swing.JPanel pnl_alap;
     private javax.swing.JPanel pnl_feltet;
     private javax.swing.JPanel pnl_teszta;
@@ -403,6 +363,6 @@ public class PizzaGUI extends javax.swing.JFrame {
     private javax.swing.JRadioButton rdbtn_tejfolos;
     private javax.swing.JRadioButton rdbtn_vastag;
     private javax.swing.JRadioButton rdbtn_vekony;
-    private javax.swing.JSpinner spnr_ar;
+    private javax.swing.JTextField txt_darab;
     // End of variables declaration//GEN-END:variables
 }

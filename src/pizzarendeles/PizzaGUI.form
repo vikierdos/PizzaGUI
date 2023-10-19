@@ -37,46 +37,52 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="pnl_teszta" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="pnl_alap" linkSize="1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="pnl_feltet" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="lbl_pizzakep" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="btn_rendeles" alignment="1" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="lbl_udito" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                           <Group type="102" attributes="0">
                               <Component id="lbl_ar" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="spnr_ar" min="-2" pref="89" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="lbl_arszam" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="btn_rendeles" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lbl_darab" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="txt_darab" min="-2" pref="64" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="cmbbx_udito" alignment="1" pref="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="13" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="pnl_teszta" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="pnl_alap" linkSize="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="pnl_feltet" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+                      <Component id="cmbbx_pizza" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
-              <Component id="cmbbx_pizza" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="pnl_alap" max="32767" attributes="0"/>
                   <Component id="pnl_teszta" max="32767" attributes="0"/>
@@ -85,19 +91,28 @@
               <Component id="cmbbx_pizza" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="pnl_feltet" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lbl_pizzakep" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="lbl_udito" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="cmbbx_udito" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="spnr_ar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbl_ar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_darab" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_darab" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbl_ar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_arszam" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btn_rendeles" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="lbl_pizzakep" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="12" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -230,11 +245,6 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="lbl_ar">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#xc1;r: "/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JComboBox" name="cmbbx_pizza">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -315,7 +325,7 @@
                       <Component id="chkbx_csirke" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="chkbx_kukorica" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="27" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -325,73 +335,46 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Anan&#xe1;sz"/>
           </Properties>
-          <Events>
-            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="chkbx_ananaszFocusGained"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="chkbx_cheddar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cheddar"/>
           </Properties>
-          <Events>
-            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="chkbx_cheddarFocusGained"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="chkbx_gomba">
           <Properties>
             <Property name="text" type="java.lang.String" value="Gomba"/>
           </Properties>
-          <Events>
-            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="chkbx_gombaFocusGained"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="chkbx_tojas">
           <Properties>
             <Property name="text" type="java.lang.String" value="F&#x151;tt Toj&#xe1;s"/>
           </Properties>
-          <Events>
-            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="chkbx_tojasFocusGained"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="chkbx_tejfol">
           <Properties>
             <Property name="text" type="java.lang.String" value="Tejf&#xf6;l"/>
           </Properties>
-          <Events>
-            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="chkbx_tejfolFocusGained"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="chkbox_pepperone">
           <Properties>
             <Property name="text" type="java.lang.String" value="Pepperone"/>
           </Properties>
-          <Events>
-            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="chkbox_pepperoneFocusGained"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="chkbx_kukorica">
           <Properties>
             <Property name="text" type="java.lang.String" value="Kukorica"/>
           </Properties>
-          <Events>
-            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="chkbx_kukoricaFocusGained"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="chkbx_bbq">
           <Properties>
             <Property name="text" type="java.lang.String" value="BBQ sz&#xf3;sz"/>
           </Properties>
-          <Events>
-            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="chkbx_bbqFocusGained"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="chkbx_csirke">
           <Properties>
             <Property name="text" type="java.lang.String" value="Csirke"/>
           </Properties>
-          <Events>
-            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="chkbx_csirkeFocusGained"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -402,15 +385,58 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JSpinner" name="spnr_ar">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="btn_rendeles">
       <Properties>
         <Property name="text" type="java.lang.String" value="Rendel&#xe9;s"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_rendelesActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbl_udito">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Aj&#xe1;nd&#xe9;k &#xfc;d&#xed;t&#x151;:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cmbbx_udito">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="5">
+            <StringItem index="0" value="&lt;&lt; &#xdc;d&#xed;t&#x151; &gt;&gt;"/>
+            <StringItem index="1" value="Coca-Cola"/>
+            <StringItem index="2" value="Sprite"/>
+            <StringItem index="3" value="Fanta"/>
+            <StringItem index="4" value="Coca-Cola Zero"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbl_darab">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Darab:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbl_ar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc1;r:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbl_arszam">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="2500"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt_darab">
+      <Properties>
+        <Property name="columns" type="int" value="1"/>
+        <Property name="text" type="java.lang.String" value="1"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_darabActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
