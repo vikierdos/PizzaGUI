@@ -4,6 +4,8 @@
  */
 package pizzarendeles;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author csics
@@ -49,6 +51,7 @@ public class PizzaGUI extends javax.swing.JFrame {
         chkbx_csirke = new javax.swing.JCheckBox();
         lbl_pizzakep = new javax.swing.JLabel();
         spnr_ar = new javax.swing.JSpinner();
+        btn_rendeles = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Pizza Rendelő");
@@ -243,6 +246,13 @@ public class PizzaGUI extends javax.swing.JFrame {
 
         spnr_ar.setEnabled(false);
 
+        btn_rendeles.setText("Rendelés");
+        btn_rendeles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_rendelesActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -260,11 +270,14 @@ public class PizzaGUI extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lbl_pizzakep)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
-                        .addComponent(lbl_ar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(spnr_ar, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbl_ar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(spnr_ar, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btn_rendeles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(13, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(117, 117, 117)
                 .addComponent(cmbbx_pizza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -285,11 +298,14 @@ public class PizzaGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(pnl_feltet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(spnr_ar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lbl_ar))
-                    .addComponent(lbl_pizzakep))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_pizzakep)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(spnr_ar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_ar))
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_rendeles)))
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
@@ -347,6 +363,10 @@ public class PizzaGUI extends javax.swing.JFrame {
         spnr_ar.setValue(ar);
     }//GEN-LAST:event_chkbx_csirkeFocusGained
 
+    private void btn_rendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_rendelesActionPerformed
+        JOptionPane.showMessageDialog(null, "Teszt verzió!");
+    }//GEN-LAST:event_btn_rendelesActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -383,6 +403,7 @@ public class PizzaGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_rendeles;
     private javax.swing.ButtonGroup btngrp_alap;
     private javax.swing.ButtonGroup btngrp_teszta;
     private javax.swing.JCheckBox chkbox_pepperone;
