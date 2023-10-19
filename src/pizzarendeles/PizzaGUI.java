@@ -364,7 +364,7 @@ public class PizzaGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_chkbx_csirkeFocusGained
 
     private void btn_rendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_rendelesActionPerformed
-        JOptionPane.showMessageDialog(null, "Teszt verzió!");
+        JOptionPane.showMessageDialog(rootPane, "Tesztverzió!", "Cím", 2);
     }//GEN-LAST:event_btn_rendelesActionPerformed
 
     /**
