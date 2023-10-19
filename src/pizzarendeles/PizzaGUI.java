@@ -236,11 +236,6 @@ public class PizzaGUI extends javax.swing.JFrame {
         spnr_ar.setEnabled(false);
 
         btn_rendeles.setText("Rendelés");
-        btn_rendeles.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_rendelesActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -351,10 +346,6 @@ public class PizzaGUI extends javax.swing.JFrame {
         int ar = Integer.parseInt(spnr_ar.getValue().toString())+200;
         spnr_ar.setValue(ar);
     }//GEN-LAST:event_chkbx_csirkeFocusGained
-
-    private void btn_rendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_rendelesActionPerformed
-        JOptionPane.showMessageDialog(rootPane, "Tesztverzió!", "Cím", 2);
-    }//GEN-LAST:event_btn_rendelesActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
