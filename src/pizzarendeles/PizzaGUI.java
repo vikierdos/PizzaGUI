@@ -1,20 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package pizzarendeles;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author csics
- */
 public class PizzaGUI extends javax.swing.JFrame {
 
-    /**
-     * Creates new form PizzaGUI
-     */
     public PizzaGUI() {
         initComponents();
     }
@@ -367,9 +356,6 @@ public class PizzaGUI extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(rootPane, "Tesztverzió!", "Cím", 2);
     }//GEN-LAST:event_btn_rendelesActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
